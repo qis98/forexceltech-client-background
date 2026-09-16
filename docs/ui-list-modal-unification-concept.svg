@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0b1f33" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="nav" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#173b63"/>
+      <stop offset="1" stop-color="#102f52"/>
+    </linearGradient>
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="3.4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M5.5 20c.8-4 3-6.2 6.5-6.2S17.7 16 18.5 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-visit" viewBox="0 0 24 24">
+      <rect x="5" y="4" width="14" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M9 4.5V3m6 1.5V3M8.5 9h7M8.5 13h7M8.5 17h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M7 7l10 10M17 7L7 17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <rect width="1280" height="760" fill="#f3f6fa"/>
+  <rect width="248" height="760" fill="url(#nav)"/>
+  <rect x="22" y="34" width="48" height="48" rx="10" fill="#f28a2e"/>
+  <text x="46" y="66" fill="#fff" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="24" font-weight="700" text-anchor="middle">F</text>
+  <text x="88" y="55" fill="#fff" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18" font-weight="700">FOREXCELTECH</text>
+  <text x="88" y="78" fill="#a9bdd4" font-family="Microsoft YaHei, sans-serif" font-size="12">客户背景管理</text>
+  <line x1="18" y1="126" x2="230" y2="126" stroke="#31557c"/>
+  <g font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="600">
+    <text x="54" y="177" fill="#dbe7f5">工作台</text>
+    <text x="54" y="221" fill="#dbe7f5">客户</text>
+    <rect x="16" y="238" width="216" height="42" rx="7" fill="#2f527b"/>
+    <rect x="16" y="246" width="4" height="26" rx="2" fill="#4aa3ff"/>
+    <g color="#dce9f7"><use href="#i-user" x="30" y="248" width="22" height="22"/></g>
+    <text x="64" y="265" fill="#fff">联系人</text>
+    <text x="54" y="317" fill="#dbe7f5">拜访记录</text>
+    <text x="54" y="361" fill="#dbe7f5">智能录入</text>
+    <text x="54" y="405" fill="#dbe7f5">客户地图</text>
+  </g>
+
+  <rect x="248" width="1032" height="70" fill="#fff"/>
+  <line x1="248" y1="70" x2="1280" y2="70" stroke="#e2e8f0"/>
+  <rect x="278" y="20" width="610" height="34" rx="6" fill="#fff" stroke="#d8e1ec"/>
+  <text x="300" y="42" fill="#8a96a6" font-family="Microsoft YaHei, sans-serif" font-size="14">搜索联系人、客户、职位、部门、关系或偏好</text>
+  <rect x="1116" y="20" width="112" height="34" rx="6" fill="#0f52ba"/>
+  <text x="1172" y="42" fill="#fff" font-family="Microsoft YaHei, sans-serif" font-size="14" text-anchor="middle">新增客户</text>
+
+  <text x="278" y="110" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="14">统一后的列表模板：摘要一屏可扫读，详情弹框承载长信息。</text>
+
+  <g filter="url(#shadow)">
+    <rect x="278" y="132" width="930" height="276" rx="8" fill="#fff"/>
+    <text x="306" y="172" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="22" font-weight="700">联系人摘要列表</text>
+    <text x="306" y="198" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="14">姓名、客户、职位和下一话题优先展示，关系偏好等长字段进入详情。</text>
+
+    <g transform="translate(306 220)">
+      <rect width="866" height="72" rx="7" fill="#f8fbff" stroke="#dfe8f2"/>
+      <g color="#0f52ba"><use href="#i-user" x="18" y="24" width="22" height="22"/></g>
+      <text x="54" y="28" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="700">王强-1601</text>
+      <text x="54" y="53" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="13">界面测试客户-202606281601 · 生产部 · 生产主管</text>
+      <rect x="398" y="18" width="72" height="26" rx="13" fill="#edf4ff"/>
+      <text x="434" y="36" fill="#0f52ba" font-family="Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle">影响力 3/5</text>
+      <rect x="484" y="18" width="104" height="26" rx="13" fill="#f4f7fb"/>
+      <text x="536" y="36" fill="#687586" font-family="Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle">持续跟进</text>
+      <text x="620" y="36" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="13">下一话题：现场试用、培训计划、异常处理</text>
+      <g color="#a0aaba"><use href="#i-arrow" x="830" y="25" width="20" height="20"/></g>
+    </g>
+
+    <g transform="translate(306 304)">
+      <rect width="866" height="72" rx="7" fill="#fff" stroke="#e5ebf2"/>
+      <g color="#0f52ba"><use href="#i-user" x="18" y="24" width="22" height="22"/></g>
+      <text x="54" y="28" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="700">李娜-1601</text>
+      <text x="54" y="53" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="13">界面测试客户-202606281601 · 设备工程部 · 设备工程师</text>
+      <rect x="398" y="18" width="72" height="26" rx="13" fill="#edf4ff"/>
+      <text x="434" y="36" fill="#0f52ba" font-family="Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle">影响力 4/5</text>
+      <rect x="484" y="18" width="104" height="26" rx="13" fill="#f4f7fb"/>
+      <text x="536" y="36" fill="#687586" font-family="Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle">技术认可</text>
+      <text x="620" y="36" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="13">下一话题：技术方案、节拍数据、维护周期</text>
+      <g color="#a0aaba"><use href="#i-arrow" x="830" y="25" width="20" height="20"/></g>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="278" y="432" width="930" height="256" rx="8" fill="#fff"/>
+    <text x="306" y="472" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="22" font-weight="700">拜访记录时间线</text>
+    <text x="306" y="498" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="14">时间作为第一视觉锚点；摘要和下一步限制两行，全文进详情弹框。</text>
+
+    <g transform="translate(306 520)">
+      <rect width="866" height="78" rx="7" fill="#f8fbff" stroke="#dfe8f2"/>
+      <rect x="0" y="0" width="4" height="78" rx="2" fill="#0f52ba"/>
+      <text x="20" y="25" fill="#0f52ba" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="700">2026/6/29 17:47</text>
+      <g color="#0f52ba"><use href="#i-visit" x="150" y="11" width="22" height="22"/></g>
+      <text x="182" y="25" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="700">压测拜访-0521 产线升级沟通</text>
+      <text x="182" y="50" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="13">压测客户-0521 · phone · 客户会议室-1 · 参与人 3</text>
+      <text x="520" y="32" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="13">摘要：讨论设备选型、商务条件、交期和售后响应。</text>
+      <text x="520" y="56" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="13">下一步：4 天内发送技术方案和报价。</text>
+      <g color="#a0aaba"><use href="#i-arrow" x="830" y="29" width="20" height="20"/></g>
+    </g>
+
+    <g transform="translate(306 610)">
+      <rect width="866" height="58" rx="7" fill="#fff" stroke="#e5ebf2"/>
+      <rect x="0" y="0" width="4" height="58" rx="2" fill="#8fb3dd"/>
+      <text x="20" y="24" fill="#0f52ba" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" font-weight="700">2026/6/29 17:20</text>
+      <text x="182" y="24" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="700">压测拜访-0260 产线升级沟通</text>
+      <text x="182" y="46" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="13">现场拜访 · 客户会议室-0 · 摘要已折叠</text>
+      <g color="#a0aaba"><use href="#i-arrow" x="830" y="19" width="20" height="20"/></g>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="680" y="176" width="430" height="430" rx="10" fill="#fff" opacity=".96"/>
+    <rect x="680" y="176" width="430" height="58" rx="10" fill="#fff"/>
+    <text x="704" y="212" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="700">联系人详情</text>
+    <rect x="1058" y="190" width="30" height="30" rx="6" fill="#fff" stroke="#d8e1ec"/>
+    <g color="#8a96a6"><use href="#i-close" x="1063" y="195" width="20" height="20"/></g>
+    <line x1="680" y1="234" x2="1110" y2="234" stroke="#e5ebf2"/>
+    <rect x="704" y="256" width="382" height="70" rx="8" fill="#f8fbff" stroke="#dfe8f2"/>
+    <text x="724" y="286" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="700">王强-1601</text>
+    <text x="724" y="310" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="13">界面测试客户 · 生产部 · 生产主管</text>
+    <rect x="704" y="348" width="178" height="58" rx="7" fill="#fff" stroke="#e5ebf2"/>
+    <text x="720" y="372" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="12">电话</text>
+    <text x="720" y="394" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="15" font-weight="700">13800010003</text>
+    <rect x="898" y="348" width="188" height="58" rx="7" fill="#fff" stroke="#e5ebf2"/>
+    <text x="914" y="372" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="12">沟通偏好</text>
+    <text x="914" y="394" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="15" font-weight="700">现场沟通效果更好</text>
+    <rect x="704" y="424" width="382" height="70" rx="7" fill="#fff" stroke="#e5ebf2"/>
+    <text x="720" y="450" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="12">下次可提及话题</text>
+    <text x="720" y="476" fill="#111827" font-family="Microsoft YaHei, sans-serif" font-size="15">现场试用、培训计划、异常处理</text>
+    <line x1="680" y1="548" x2="1110" y2="548" stroke="#e5ebf2"/>
+    <rect x="866" y="566" width="92" height="34" rx="6" fill="#fff" stroke="#d8e1ec"/>
+    <text x="912" y="588" fill="#0f52ba" font-family="Microsoft YaHei, sans-serif" font-size="14" text-anchor="middle">编辑联系人</text>
+    <rect x="970" y="566" width="116" height="34" rx="6" fill="#0f52ba"/>
+    <text x="1028" y="588" fill="#fff" font-family="Microsoft YaHei, sans-serif" font-size="14" text-anchor="middle">查看客户详情</text>
+  </g>
+
+  <text x="278" y="724" fill="#7d8794" font-family="Microsoft YaHei, sans-serif" font-size="12">效果重点：联系人和拜访记录共享列表项语言；长字段进入详情弹框；按钮和弹框头尾统一。</text>
+</svg>

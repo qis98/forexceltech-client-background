@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOREXCELTECH 客户背景管理系统</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <svg class="svg-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-dashboard" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" rx="1.6"></rect>
+        <rect x="14" y="3" width="7" height="7" rx="1.6"></rect>
+        <rect x="3" y="14" width="7" height="7" rx="1.6"></rect>
+        <rect x="14" y="14" width="7" height="7" rx="1.6"></rect>
+      </symbol>
+      <symbol id="icon-customers" viewBox="0 0 24 24">
+        <path d="M4 20V8.5L12 4l8 4.5V20"></path>
+        <path d="M8 20v-7h8v7"></path>
+        <path d="M9 9h.01M15 9h.01"></path>
+      </symbol>
+      <symbol id="icon-contacts" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="3.2"></circle>
+        <path d="M5.5 20a6.5 6.5 0 0 1 13 0"></path>
+      </symbol>
+      <symbol id="icon-visits" viewBox="0 0 24 24">
+        <path d="M8 4h8l1 2h2v14H5V6h2l1-2Z"></path>
+        <path d="M9 11h6M9 15h4"></path>
+      </symbol>
+      <symbol id="icon-ai" viewBox="0 0 24 24">
+        <path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"></path>
+        <path d="m18 15 .8 2.2L21 18l-2.2.8L18 21l-.8-2.2L15 18l2.2-.8L18 15Z"></path>
+      </symbol>
+      <symbol id="icon-map" viewBox="0 0 24 24">
+        <path d="m9 18-6 3V6l6-3 6 3 6-3v15l-6 3-6-3Z"></path>
+        <path d="M9 3v15M15 6v15"></path>
+      </symbol>
+      <symbol id="icon-settings" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M19.4 15a1.8 1.8 0 0 0 .36 1.98l.04.04a2.1 2.1 0 0 1-2.97 2.97l-.04-.04a1.8 1.8 0 0 0-1.98-.36 1.8 1.8 0 0 0-1.09 1.65V21.3a2.1 2.1 0 0 1-4.2 0v-.06a1.8 1.8 0 0 0-1.09-1.65 1.8 1.8 0 0 0-1.98.36l-.04.04a2.1 2.1 0 0 1-2.97-2.97l.04-.04A1.8 1.8 0 0 0 4.6 15a1.8 1.8 0 0 0-1.65-1.09H2.9a2.1 2.1 0 0 1 0-4.2h.06A1.8 1.8 0 0 0 4.6 8a1.8 1.8 0 0 0-.36-1.98l-.04-.04a2.1 2.1 0 0 1 2.97-2.97l.04.04A1.8 1.8 0 0 0 9.2 4.6a1.8 1.8 0 0 0 1.09-1.65V2.9a2.1 2.1 0 0 1 4.2 0v.06A1.8 1.8 0 0 0 15.6 4.6a1.8 1.8 0 0 0 1.98-.36l.04-.04a2.1 2.1 0 0 1 2.97 2.97l-.04.04A1.8 1.8 0 0 0 19.4 8c.2.5.68.84 1.23.88h.06a2.1 2.1 0 0 1 0 4.2h-.06A1.8 1.8 0 0 0 19.4 15Z"></path>
+      </symbol>
+      <symbol id="icon-backup" viewBox="0 0 24 24">
+        <path d="M5 20h14V8l-4-4H5v16Z"></path>
+        <path d="M15 4v5h5M8 16h8M12 12v8"></path>
+      </symbol>
+      <symbol id="icon-export" viewBox="0 0 24 24">
+        <path d="M12 3v12"></path>
+        <path d="m7 10 5 5 5-5"></path>
+        <path d="M5 21h14"></path>
+      </symbol>
+      <symbol id="icon-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14"></path>
+      </symbol>
+      <symbol id="icon-home" viewBox="0 0 24 24">
+        <path d="m3 11 9-8 9 8"></path>
+        <path d="M5 10v10h14V10"></path>
+      </symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24">
+        <path d="m9 18 6-6-6-6"></path>
+      </symbol>
+    </svg>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">F</div>
+        <div>
+          <strong>FOREXCELTECH</strong>
+          <span>客户背景管理</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard"><svg class="ui-icon nav-icon"><use href="#icon-dashboard"></use></svg><span>工作台</span></button>
+        <button class="nav-item" data-view="customers"><svg class="ui-icon nav-icon"><use href="#icon-customers"></use></svg><span>客户</span></button>
+        <button class="nav-item" data-view="contacts"><svg class="ui-icon nav-icon"><use href="#icon-contacts"></use></svg><span>联系人</span></button>
+        <button class="nav-item" data-view="visits"><svg class="ui-icon nav-icon"><use href="#icon-visits"></use></svg><span>拜访记录</span></button>
+        <button class="nav-item" data-view="ai-entry"><svg class="ui-icon nav-icon"><use href="#icon-ai"></use></svg><span>智能录入</span></button>
+        <button class="nav-item" data-view="customer-map"><svg class="ui-icon nav-icon"><use href="#icon-map"></use></svg><span>客户地图</span></button>
+      </nav>
+      <div class="data-status" aria-hidden="true">
+        <span>数据目录</span>
+        <strong id="database-path">初始化中</strong>
+      </div>
+    </aside>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <input id="global-search" class="search" type="search" placeholder="搜索客户名称、简称、行业或区域" />
+        <button id="settings-top" class="icon-button topbar-icon-button" type="button" title="设置" aria-label="设置"><svg class="ui-icon"><use href="#icon-settings"></use></svg></button>
+      </header>
+
+      <section class="workspace">
+        <section id="dashboard-view" class="view active">
+          <div class="metric-grid">
+            <article class="metric">
+              <div class="metric-icon"><svg class="ui-icon"><use href="#icon-customers"></use></svg></div>
+              <div>
+                <span>客户</span>
+                <strong id="metric-customers">0</strong>
+              </div>
+            </article>
+            <article class="metric">
+              <div class="metric-icon"><svg class="ui-icon"><use href="#icon-contacts"></use></svg></div>
+              <div>
+                <span>联系人</span>
+                <strong id="metric-contacts">0</strong>
+              </div>
+            </article>
+            <article class="metric">
+              <div class="metric-icon"><svg class="ui-icon"><use href="#icon-visits"></use></svg></div>
+              <div>
+                <span>拜访记录</span>
+                <strong id="metric-visits">0</strong>
+              </div>
+            </article>
+          </div>
+
+          <div class="dashboard-main-grid">
+            <section class="panel calendar-panel">
+              <div class="panel-header calendar-panel-header">
+                <div></div>
+                <div class="calendar-toolbar">
+                  <button id="calendar-year-picker" class="secondary-button calendar-picker-button" type="button">2026年</button>
+                  <button id="calendar-month-picker" class="secondary-button calendar-picker-button" type="button">6月</button>
+                  <button id="calendar-today-button" class="icon-button calendar-today-button" type="button" title="回到今天" aria-label="回到今天"><svg class="ui-icon"><use href="#icon-home"></use></svg></button>
+                </div>
+              </div>
+              <div class="calendar-weekdays" aria-hidden="true">
+                <span>一</span>
+                <span>二</span>
+                <span>三</span>
+                <span>四</span>
+                <span>五</span>
+                <span>六</span>
+                <span>日</span>
+              </div>
+              <div id="calendar-grid" class="calendar-grid"></div>
+            </section>
+
+            <section class="panel recent-panel">
+              <div class="panel-header">
+                <h2>最近客户</h2>
+                <button class="ghost-button" data-view-target="customers" type="button">查看全部</button>
+              </div>
+              <div id="recent-customers" class="record-list empty">暂无客户，先新增一个客户。</div>
+            </section>
+          </div>
+        </section>
+
+        <section id="customers-view" class="view">
+          <div id="customer-list-mode" class="customer-list-mode">
+            <div class="customer-toolbar">
+              <div class="filter-bar">
+                <select id="filter-status" aria-label="客户状态">
+                  <option value="">全部状态</option>
+                  <option value="potential">潜在</option>
+                  <option value="active">活跃</option>
+                  <option value="inactive">停用</option>
+                </select>
+                <select id="filter-industry" aria-label="行业">
+                  <option value="">全部行业</option>
+                </select>
+                <select id="filter-region" aria-label="区域">
+                  <option value="">全部区域</option>
+                </select>
+              </div>
+              <div class="page-action-bar customer-page-actions">
+                <button id="export-customers" class="secondary-button" type="button"><svg class="ui-icon button-icon"><use href="#icon-export"></use></svg><span>导出客户</span></button>
+                <button id="new-customer-page" class="primary-button" type="button"><svg class="ui-icon button-icon"><use href="#icon-plus"></use></svg><span>新增客户</span></button>
+              </div>
+            </div>
+
+            <section class="list-panel customer-list-page-panel">
+              <div id="customer-list" class="customer-list"></div>
+              <div id="customer-pagination" class="pagination-bar" hidden></div>
+            </section>
+          </div>
+
+        </section>
+
+        <section id="contacts-view" class="view">
+          <section class="panel list-page-panel">
+            <div id="all-contacts-list" class="record-list empty">暂无联系人。</div>
+            <div id="contacts-pagination" class="pagination-bar" hidden></div>
+          </section>
+        </section>
+
+        <section id="visits-view" class="view">
+          <section class="panel list-page-panel">
+            <div id="all-visits-list" class="record-list empty">暂无拜访或沟通记录。</div>
+            <div id="visits-pagination" class="pagination-bar" hidden></div>
+          </section>
+        </section>
+
+        <section id="ai-entry-view" class="view">
+          <div class="ai-entry-layout">
+            <section class="panel ai-input-panel">
+              <div class="panel-header">
+                <h2>文字稿</h2>
+                <div class="detail-actions">
+                  <button id="ai-load-sample" class="secondary-button" type="button">填入示例</button>
+                </div>
+              </div>
+              <div id="ai-audio-status" class="ai-audio-status" hidden></div>
+              <div class="ai-association-grid">
+                <div class="field">
+                  <label for="ai-linked-customer">预关联客户</label>
+                  <input id="ai-linked-customer" type="hidden" value="" />
+                  <button id="ai-linked-customer-trigger" class="picker-button" type="button">不预关联客户</button>
+                </div>
+                <div class="field">
+                  <label for="ai-linked-contact">预关联联系人</label>
+                  <input id="ai-linked-contact" type="hidden" value="" />
+                  <button id="ai-linked-contact-trigger" class="picker-button" type="button">不预关联联系人</button>
+                </div>
+              </div>
+              <textarea id="ai-transcript" class="ai-transcript" placeholder="请粘贴聊天记录或拜访备忘录，例如：今天下午拜访了深圳智造的王总，他表示下个月有扩产计划，设备部李工关注交期和售后，下一步需要发送技术方案和报价。"></textarea>
+              <div class="ai-actions">
+                <button id="ai-generate-drafts" class="primary-button" type="button">生成草稿</button>
+                <button id="ai-clear-drafts" class="secondary-button" type="button">清空</button>
+              </div>
+            </section>
+
+            <section class="panel ai-result-panel">
+              <div class="panel-header">
+                <h2>待确认草稿</h2>
+                <div class="detail-actions">
+                  <span id="ai-result-meta" class="compact-note">尚未生成</span>
+                </div>
+              </div>
+              <div id="ai-draft-results" class="ai-draft-results empty">粘贴文字稿后点击“生成草稿”。</div>
+              <div class="ai-global-actions">
+                <button id="ai-confirm-drafts" class="primary-button" type="button">全部确认写入</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="customer-map-view" class="view">
+          <div class="map-filter-bar">
+            <select id="map-filter-status" aria-label="地图客户状态">
+              <option value="">全部状态</option>
+              <option value="potential">潜在</option>
+              <option value="active">活跃</option>
+              <option value="inactive">停用</option>
+            </select>
+            <select id="map-filter-industry" aria-label="地图行业">
+              <option value="">全部行业</option>
+            </select>
+          </div>
+
+          <div class="customer-map-layout">
+            <section class="panel map-panel">
+              <div class="panel-header">
+                <div>
+                  <h2 id="map-title">客户分布</h2>
+                  <p id="map-subtitle" class="panel-subtitle" hidden></p>
+                </div>
+                <div class="map-header-actions">
+                  <button id="map-back-china" class="icon-button map-back-button" type="button" title="返回全国" aria-label="返回全国" hidden>↩</button>
+                  <span id="map-summary" class="compact-note">0 个客户</span>
+                </div>
+              </div>
+              <div id="customer-map-canvas" class="map-canvas" aria-label="客户地图"></div>
+            </section>
+          </div>
+        </section>
+
+        <section id="settings-view" class="view">
+          <section class="panel settings-panel">
+            <div class="panel-header">
+              <h2>设置</h2>
+              <span id="settings-status" class="compact-note">读取中</span>
+            </div>
+
+            <form id="settings-form" class="settings-form">
+              <section class="settings-card full">
+                <div class="settings-card-head">
+                  <div>
+                    <h3>智能录入</h3>
+                  </div>
+                  <span class="settings-card-tag">本地优先</span>
+                </div>
+                <div class="settings-card-grid">
+                  <div class="field">
+                    <label for="settings-ai-mode">AI 模式</label>
+                    <select id="settings-ai-mode" name="aiMode">
+                      <option value="local">仅本地规则</option>
+                      <option value="ollama">Ollama 本地模型</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="settings-extraction-model">Ollama 模型名称</label>
+                    <input id="settings-extraction-model" name="ollamaModel" type="text" placeholder="qwen3:8b" />
+                  </div>
+                  <div class="field full">
+                    <label for="settings-base-url">Ollama 服务地址</label>
+                    <div class="settings-inline-action">
+                      <input id="settings-base-url" name="ollamaBaseUrl" type="text" placeholder="http://localhost:11434" />
+                      <button id="settings-test" class="secondary-button" type="button">测试连接</button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="settings-card full">
+                <div class="settings-card-head">
+                  <div>
+                    <h3>工作台日历</h3>
+                  </div>
+                  <span class="settings-card-tag">商务配色</span>
+                </div>
+                <div class="calendar-scheme-grid" aria-label="日历配色方案">
+                  <button class="calendar-scheme-card" type="button" data-calendar-scheme="mint" data-visited="#B5EAD7" data-planned="#FFB7B2">
+                    <span class="scheme-title">清透薄荷</span>
+                    <span class="scheme-desc">推荐，清新透气</span>
+                    <span class="scheme-swatches">
+                      <span style="--swatch-color:#B5EAD7"></span>
+                      <span style="--swatch-color:#FFB7B2"></span>
+                    </span>
+                  </button>
+                  <button class="calendar-scheme-card" type="button" data-calendar-scheme="morandi" data-visited="#A3E1D4" data-planned="#F8C4CC">
+                    <span class="scheme-title">晨雾莫兰迪</span>
+                    <span class="scheme-desc">专业，沉稳内敛</span>
+                    <span class="scheme-swatches">
+                      <span style="--swatch-color:#A3E1D4"></span>
+                      <span style="--swatch-color:#F8C4CC"></span>
+                    </span>
+                  </button>
+                  <button class="calendar-scheme-card" type="button" data-calendar-scheme="warm" data-visited="#E2F0CB" data-planned="#FFDAC1">
+                    <span class="scheme-title">活力暖阳</span>
+                    <span class="scheme-desc">温暖，亲和轻快</span>
+                    <span class="scheme-swatches">
+                      <span style="--swatch-color:#E2F0CB"></span>
+                      <span style="--swatch-color:#FFDAC1"></span>
+                    </span>
+                  </button>
+                </div>
+                <div class="settings-card-grid calendar-color-controls">
+                  <div class="field">
+                    <label for="settings-calendar-visited">已拜访颜色</label>
+                    <input id="settings-calendar-visited" name="calendarVisitedColor" type="color" value="#B5EAD7" />
+                  </div>
+                  <div class="field">
+                    <label for="settings-calendar-planned">计划未完成颜色</label>
+                    <input id="settings-calendar-planned" name="calendarPlannedColor" type="color" value="#FFB7B2" />
+                  </div>
+                  <div class="field">
+                    <label for="settings-calendar-badge-max">日期角标最大值</label>
+                    <input id="settings-calendar-badge-max" name="calendarBadgeMax" type="number" min="1" max="99" value="99" />
+                  </div>
+                  <div id="settings-calendar-preview" class="calendar-color-preview" aria-label="日历颜色预览">
+                    <span data-preview="visited">已拜访</span>
+                    <span data-preview="planned">计划</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="settings-card full">
+                <div class="settings-card-head">
+                  <div>
+                    <h3>数据位置</h3>
+                  </div>
+                  <span class="settings-card-tag">离线本地</span>
+                </div>
+                <div class="settings-card-grid">
+                  <div class="field full">
+                    <label>配置文件</label>
+                    <div id="settings-config-path" class="readonly-box">D:\FOREXCELTECHClientManager\config.json</div>
+                  </div>
+                  <div class="field full">
+                    <label>数据库文件</label>
+                    <div id="settings-db-path" class="readonly-box">D:\FOREXCELTECHClientManager\data.db</div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="settings-card full">
+                <div class="settings-card-head">
+                  <div>
+                    <h3>数据管理</h3>
+                  </div>
+                  <span class="settings-card-tag">本地数据</span>
+                </div>
+                <div class="settings-card-grid">
+                  <div class="settings-data-actions full">
+                    <button id="settings-backup-data" class="secondary-button" type="button"><svg class="ui-icon button-icon"><use href="#icon-backup"></use></svg><span>备份数据库</span></button>
+                    <button id="settings-export-csv" class="secondary-button" type="button"><svg class="ui-icon button-icon"><use href="#icon-export"></use></svg><span>导出 CSV</span></button>
+                    <button id="settings-restore-backup" class="secondary-button" type="button">从备份恢复</button>
+                  </div>
+                </div>
+              </section>
+
+              <div class="settings-actions full">
+                <button id="settings-save" class="primary-button" type="submit">保存设置</button>
+              </div>
+            </form>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="entity-dialog" class="entity-dialog">
+      <form id="entity-form" method="dialog">
+        <div class="dialog-header">
+          <h2 id="dialog-title">表单</h2>
+          <button id="dialog-close" class="icon-button" type="button" aria-label="关闭">×</button>
+        </div>
+        <div id="dialog-fields" class="form-grid"></div>
+        <div class="dialog-actions">
+          <button id="dialog-cancel" class="secondary-button" type="button">取消</button>
+          <button class="primary-button" type="submit">保存</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="detail-dialog" class="entity-dialog detail-dialog">
+      <form method="dialog">
+        <div class="dialog-header">
+          <h2 id="detail-dialog-title">详情</h2>
+          <button id="detail-dialog-close" class="icon-button" type="button" aria-label="关闭">×</button>
+        </div>
+        <div id="detail-dialog-body" class="detail-dialog-body"></div>
+        <div id="detail-dialog-actions" class="dialog-actions"></div>
+      </form>
+    </dialog>
+
+    <dialog id="visit-duplicate-dialog" class="entity-dialog duplicate-dialog">
+      <form method="dialog">
+        <div class="dialog-header">
+          <h2>疑似重复拜访记录</h2>
+          <button id="duplicate-dialog-close" class="icon-button" type="button" aria-label="关闭">×</button>
+        </div>
+        <div id="duplicate-visit-body" class="duplicate-body"></div>
+        <div class="dialog-actions duplicate-actions">
+          <button id="duplicate-create-visit" class="secondary-button" type="button">仍创建新拜访记录</button>
+          <button id="duplicate-merge-visit" class="primary-button" type="button">合并到已有记录</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="./vendor/echarts/echarts.min.js"></script>
+    <script src="./vendor/maps/china-map-geojson.js"></script>
+    <script src="./vendor/maps/east-asia-neighbors.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

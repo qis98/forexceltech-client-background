@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "description": "光通信/光模块新客户开发关键词、地区和评分规则。仅保存业务检索标签，不保存个人背景信息。",
+  "regions": {
+    "primaryCities": ["深圳", "东莞", "惠州"],
+    "secondaryCities": ["广州", "中山", "珠海", "佛山"],
+    "districts": [
+      "深圳光明",
+      "深圳宝安",
+      "深圳南山",
+      "深圳龙岗",
+      "深圳坪山",
+      "东莞松山湖",
+      "东莞塘厦",
+      "东莞长安",
+      "东莞大岭山",
+      "惠州仲恺",
+      "惠州惠阳",
+      "惠州大亚湾",
+      "广州黄埔",
+      "中山",
+      "珠海"
+    ]
+  },
+  "keywordGroups": {
+    "product": [
+      "光模块",
+      "光器件",
+      "光收发模块",
+      "硅光",
+      "Silicon Photonics",
+      "光引擎",
+      "Optical Engine",
+      "CPO",
+      "光电共封装",
+      "LPO",
+      "AOC",
+      "有源光缆",
+      "DAC",
+      "TOSA",
+      "ROSA",
+      "BOSA",
+      "400G",
+      "800G",
+      "1.6T"
+    ],
+    "process": [
+      "COB封装",
+      "Chip on Board",
+      "微组装",
+      "裸Die贴装",
+      "裸芯片贴装",
+      "共晶焊",
+      "金丝键合",
+      "有源耦合",
+      "无源耦合",
+      "高频高速互连",
+      "光电封装",
+      "精密贴装",
+      "01005"
+    ],
+    "equipmentAndRole": [
+      "SMT工程师",
+      "设备工程师",
+      "工艺工程师",
+      "NPI工程师",
+      "封装工程师",
+      "光电测试工程师",
+      "SIPLACE",
+      "DEK",
+      "ASMPT",
+      "贴片机",
+      "印刷机",
+      "SPI",
+      "AOI",
+      "回流焊"
+    ],
+    "application": [
+      "AI服务器",
+      "算力网络",
+      "数据中心",
+      "IDC交换机",
+      "高速互连",
+      "智算中心",
+      "液冷服务器配套",
+      "交换机硬件"
+    ],
+    "event": [
+      "融资",
+      "A轮",
+      "B轮",
+      "扩产",
+      "新基地",
+      "中试线",
+      "量产",
+      "产能建设",
+      "通过认证",
+      "合格供应商",
+      "客户稽核",
+      "搬迁",
+      "招聘",
+      "环评",
+      "设备采购"
+    ],
+    "customerChain": [
+      "中际旭创",
+      "新易盛",
+      "华为",
+      "新华三",
+      "光迅科技",
+      "海信宽带",
+      "剑桥科技",
+      "博创科技",
+      "天孚通信",
+      "源杰科技",
+      "Coherent",
+      "Lumentum"
+    ],
+    "weakSignals": [
+      "贸易",
+      "代理",
+      "经销",
+      "光纤跳线",
+      "普通线缆",
+      "配件销售"
+    ]
+  },
+  "queryTemplates": [
+    "{region} {product} {process}",
+    "{region} {product} {role}",
+    "{region} {product} {event}",
+    "{region} {application} {product}",
+    "{region} {process} {role}",
+    "{region} 光模块 EMS 贴片",
+    "{region} 800G 光模块 招聘",
+    "{region} 硅光 NPI 产线",
+    "{region} TOSA ROSA 扩产",
+    "{region} 光引擎 SIPLACE 设备工程师"
+  ],
+  "scoring": {
+    "businessFit": 25,
+    "processComplexity": 20,
+    "buyingTrigger": 25,
+    "geoConvenience": 10,
+    "payingAbility": 10,
+    "contactReachability": 10,
+    "bonus": {
+      "asmptStack": 15,
+      "advancedProduct": 15,
+      "capacityEvent": 15,
+      "customerChain": 10
+    },
+    "penalty": {
+      "weakBusinessOnly": 20
+    }
+  }
+}

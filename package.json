@@ -1,0 +1,82 @@
+{
+  "name": "forexceltech-client-background",
+  "version": "0.1.0",
+  "description": "FOREXCELTECH 一级代理商销售人员客户背景管理桌面端",
+  "author": "FOREXCELTECH Client Background Team",
+  "main": "src/main/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "db:verify": "node scripts/verify-database.js",
+    "data:verify": "node scripts/verify-data-actions.js",
+    "client-leads:queries": "node scripts/client-leads.js queries",
+    "client-leads:collect": "node scripts/client-leads.js collect",
+    "client-leads:import": "node scripts/client-leads.js import",
+    "client-leads:score": "node scripts/client-leads.js score",
+    "client-leads:run": "node scripts/client-leads.js run",
+    "map:generate": "node scripts/generate-neighbor-map.js",
+    "map:verify": "node scripts/verify-map-render.js",
+    "ui:verify": "node scripts/verify-ui-entrypoints.js",
+    "ui:verify-phase1": "node scripts/verify-ui-phase1.js",
+    "ui:verify-phase2": "node scripts/verify-ui-phase2.js",
+    "ui:verify-phase3": "node scripts/verify-ui-phase3.js",
+    "ui:verify-phase4": "node scripts/verify-ui-phase4.js",
+    "ui:verify-phase5": "node scripts/verify-ui-phase5.js",
+    "ui:verify-phase6": "node scripts/verify-ui-phase6.js",
+    "ai-entry:perf": "node scripts/verify-ai-entry-performance.js",
+    "location-form:verify": "node scripts/verify-customer-location-form.js",
+    "map-calendar:verify": "node scripts/verify-map-calendar-interactions.js",
+    "perf:seed": "node scripts/performance-seed-data.js",
+    "smoke": "node scripts/smoke-electron.js",
+    "pack": "electron-builder --dir --win --x64",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.forexceltech.clientbackground",
+    "productName": "FOREXCELTECHClientManager",
+    "electronDist": "node_modules/electron/dist",
+    "directories": {
+      "output": "D:/FOREXCELTECHClientManager/release"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "vendor/sqlite",
+        "to": "sqlite",
+        "filter": [
+          "sqlite3.exe"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "artifactName": "${productName}-Setup-${version}-${arch}.${ext}",
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "FOREXCELTECH 客户背景管理系统"
+    },
+    "portable": {
+      "artifactName": "${productName}-Portable-${version}-${arch}.${ext}"
+    },
+    "asar": true
+  },
+  "devDependencies": {
+    "china-map-geojson": "^1.0.4",
+    "echarts": "^6.1.0",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.15.3",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}

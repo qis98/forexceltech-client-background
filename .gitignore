@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Local test and build artifacts
+.tmp/
+dist/
+build/
+release/
+out/
+coverage/
+
+# Runtime data and generated exports
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+attachments/
+audio-imports/
+transcripts/
+ai-drafts/
+backups/
+exports/
+logs/
+temp/
+new-client-development/output/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+config.json
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

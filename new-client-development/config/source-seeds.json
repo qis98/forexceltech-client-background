@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "description": "公开来源种子。动态网页可能无法直接抽取完整展商，脚本会保留来源链接用于人工复核。",
+  "publicSources": [
+    {
+      "name": "CIOE 中国光博会",
+      "type": "exhibition",
+      "url": "https://www.cioe.cn/"
+    },
+    {
+      "name": "CIOE 信息通信展",
+      "type": "exhibition",
+      "url": "https://www.cioe.cn/Opticalcomm.html"
+    },
+    {
+      "name": "CIOE 2026 Exhibitor List",
+      "type": "exhibition",
+      "url": "https://exhibitors.cioe.cn/gwen/index.html"
+    },
+    {
+      "name": "NEPCON China",
+      "type": "exhibition",
+      "url": "https://www.nepconchina.com/en-gb.html"
+    },
+    {
+      "name": "深圳工信局通知公告",
+      "type": "government",
+      "url": "https://gxj.sz.gov.cn/xxgk/xxgkml/qt/tzgg/"
+    },
+    {
+      "name": "东莞松山湖管委会",
+      "type": "government",
+      "url": "https://ssl.dg.gov.cn/"
+    },
+    {
+      "name": "惠州仲恺高新区",
+      "type": "government",
+      "url": "https://www.hzzk.gov.cn/"
+    }
+  ],
+  "manualSeedCsv": "new-client-development/input/manual-seeds.csv",
+  "outputDir": "new-client-development/output"
+}
